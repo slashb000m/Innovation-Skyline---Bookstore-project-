@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="402.0" prefWidth="553.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.interfacee.ListeReclamationsController">
+   <children>
+      <TableView fx:id="tableReclamation" layoutX="1.0" layoutY="14.0" prefHeight="287.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="colonneId" prefWidth="48.0" text="Id" />
+          <TableColumn fx:id="colonneNom" prefWidth="134.0" text="Email" />
+            <TableColumn fx:id="colonneTitre" prefWidth="94.0" text="Titre" />
+            <TableColumn fx:id="colonneDescription" prefWidth="323.0" text="Description" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnTraiter" layoutX="14.0" layoutY="341.0" mnemonicParsing="false" onAction="#traiterReclamation" text="Traiter reclamation" />
+      <Button fx:id="btnSupprimer" layoutX="416.0" layoutY="341.0" mnemonicParsing="false" onAction="#supprimerReclamation" text="Supprimer reclamation" />
+      <TextField fx:id="tfIdReclamation" layoutX="272.0" layoutY="341.0" prefHeight="31.0" prefWidth="39.0" />
+   </children>
+</AnchorPane>

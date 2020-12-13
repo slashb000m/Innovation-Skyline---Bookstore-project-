@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0b1d47;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.interfacee.AjouterReclamationsController">
+   <children>
+      <AnchorPane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: #ffc219;">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="182.0" layoutY="19.0" prefHeight="21.0" prefWidth="237.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: large;" text="Ajouter une reclamation " />
+         </children>
+      </AnchorPane>
+      <Label layoutX="33.0" layoutY="117.0" prefHeight="21.0" prefWidth="197.0" style="color: white; -fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: Large;" text="Objet de la reclamation" textFill="WHITE" />
+      <TextField fx:id="tfObjet" layoutX="293.0" layoutY="112.0" prefHeight="31.0" prefWidth="270.0" />
+      <Label layoutX="33.0" layoutY="234.0" prefHeight="21.0" prefWidth="197.0" style="color: white; -fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: Large;" text="Explication " textFill="WHITE" />
+      <TextField fx:id="tfExplication" layoutX="293.0" layoutY="184.0" prefHeight="141.0" prefWidth="270.0" />
+      <Button fx:id="btnSoumettreReclamation" layoutX="210.0" layoutY="340.0" mnemonicParsing="false" onAction="#saveReclamation" prefHeight="31.0" prefWidth="180.0" text="Soumettre reclamation" />
+   </children>
+</AnchorPane>
