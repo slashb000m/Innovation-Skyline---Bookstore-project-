@@ -7,6 +7,7 @@ package bookstore.esprit.authentification;
 
 import bookstore.esprit.entities.Users;
 import bookstore.esprit.mainInterface.PersonnalDataInterfaceController;
+import bookstore.esprit.services.JavaMailing;
 //import static edu.projet.mainInterface.AuthentificationInterfaceController.useremail;
 import bookstore.esprit.services.usersCRUD;
 import java.io.IOException;
@@ -33,6 +34,12 @@ public class AuthentificationInterfaceController implements Initializable {
 
     @FXML
     private PasswordField password;
+     @FXML
+    private Button forgetbutton;
+
+    @FXML
+    private Button setButton1;
+    
 
     public void setEmail(TextField email) {
         this.email = email;
@@ -50,7 +57,7 @@ public class AuthentificationInterfaceController implements Initializable {
     @FXML
     private Button loginButton;
     
-public static String useremail ;
+//public static String useremail ;
 //useremail = email.getText();
     @FXML
     void authentificationTest(ActionEvent event) {
@@ -89,6 +96,16 @@ public static String useremail ;
         }
         }
 
+    }
+    @FXML
+    void pwdMail(ActionEvent event) {
+        JavaMailing.sendMail(email.getText(),"INSCRIPTION","Felicitation, vous êtes inscrit ");
+
+
+    }
+
+    @FXML
+    void set_Pwd(ActionEvent event) {
     }
 
     @Override
