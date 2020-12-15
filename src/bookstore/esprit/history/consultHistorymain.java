@@ -15,13 +15,13 @@ import javafx.stage.Stage;
  *
  * @author Oussema
  */
-public class ConsulterAchats extends Application {
+public class consultHistorymain extends Application {
     
    @Override
     public void start(Stage primaryStage) {
         Parent root=null;
         try {
-            root = FXMLLoader.load(getClass().getResource("ConsulaterHistorique.fxml"));
+            root = FXMLLoader.load(getClass().getResource("consulthistoryInterface.fxml"));
             
         } catch (Exception e) {
             System.out.println(e.getMessage());

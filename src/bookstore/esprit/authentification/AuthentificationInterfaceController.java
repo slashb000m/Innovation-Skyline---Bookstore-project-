@@ -5,6 +5,7 @@
  */
 package bookstore.esprit.authentification;
 
+import bookstore.esprit.SignUp.InscriptionController;
 import bookstore.esprit.entities.Users;
 import bookstore.esprit.mainInterface.PersonnalDataInterfaceController;
 import bookstore.esprit.services.JavaMailing;
@@ -34,12 +35,11 @@ public class AuthentificationInterfaceController implements Initializable {
 
     @FXML
     private PasswordField password;
-     @FXML
+    @FXML
     private Button forgetbutton;
 
     @FXML
     private Button setButton1;
-    
 
     public void setEmail(TextField email) {
         this.email = email;
@@ -52,11 +52,10 @@ public class AuthentificationInterfaceController implements Initializable {
     public void setLoginButton(Button loginButton) {
         this.loginButton = loginButton;
     }
-    
 
     @FXML
     private Button loginButton;
-    
+
 //public static String useremail ;
 //useremail = email.getText();
     @FXML
@@ -64,7 +63,7 @@ public class AuthentificationInterfaceController implements Initializable {
         String temail = email.getText();
         String tpwd = password.getText();
         Users u = new Users(temail, tpwd);
-    usersCRUD uc = new usersCRUD();
+        usersCRUD uc = new usersCRUD();
         Boolean testerAuthentification = uc.authentifier(temail, tpwd);
         if (!testerAuthentification) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -74,38 +73,76 @@ public class AuthentificationInterfaceController implements Initializable {
             alert.showAndWait();
 
         } else {
-     //       U
-        // String currentUserName = u.getNom();
-         
+            //       U
+            // String currentUserName = u.getNom();
+
             bookstore.esprit.entities.GlobalClass.setCurrentUser(uc.getUser(email.getText()));
             //Global.GlobalClass.setCurrentUser(u); 
-            
+
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("AUTHENTIFICATION SUCCEEDED");
-            alert.setHeaderText(null);    
+            alert.setHeaderText(null);
             alert.setContentText("welcome again ");
             alert.showAndWait();
             try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../mainInterface/PersonnalDataInterface.fxml"));
-            Parent root2 = loader.load();
-            PersonnalDataInterfaceController pc2 = loader.getController();
-            email.getScene().setRoot(root2);
-            
-        } catch (IOException ex) {
-            ex.getMessage();
-        }
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../mainInterface/PersonnalDataInterface.fxml"));
+                Parent root2 = loader.load();
+                PersonnalDataInterfaceController pc2 = loader.getController();
+                email.getScene().setRoot(root2);
+
+            } catch (IOException ex) {
+                ex.getMessage();
+            }
         }
 
     }
+
     @FXML
     void pwdMail(ActionEvent event) {
-        JavaMailing.sendMail(email.getText(),"INSCRIPTION","Felicitation, vous êtes inscrit ");
-
-
+        usersCRUD uc = new usersCRUD();
+        String temail = email.getText();
+        String pwd = uc.getPwfromDB(temail);
+        Boolean testerAuthentification = uc.authentifier(temail, pwd);
+        if (!testerAuthentification) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("AUTHENTIFICATION SUCCEEDED");
+            alert.setHeaderText(null);
+            alert.setContentText("you do not even have an account");
+            alert.showAndWait();
+        } else {
+            JavaMailing.sendMail(temail, "PWD", "your password is :" + pwd);
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("PWD RECOVERY");
+            alert.setHeaderText(null);
+            alert.setContentText("check your email, we sent your paassword");
+            alert.showAndWait();
+        }
     }
 
     @FXML
     void set_Pwd(ActionEvent event) {
+        String temail = email.getText();
+        usersCRUD uc = new usersCRUD();
+   //  Users u =  bookstore.esprit.entities.GlobalClass.getCurrentUser();
+//        System.out.println(u.getEmail());
+           if(temail.isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("WRONG EMAIL");
+            alert.setHeaderText(null);
+            alert.setContentText("please check your email");
+            alert.showAndWait();
+        }
+           else if (uc.exist(temail)) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("ChangePwd.fxml"));
+                Parent root2 = loader.load();
+                ChangePwdController pc2 = loader.getController();
+                email.getScene().setRoot(root2);
+            } catch (IOException ex) {
+                ex.getMessage();
+            }
+        } 
+
     }
 
     @Override

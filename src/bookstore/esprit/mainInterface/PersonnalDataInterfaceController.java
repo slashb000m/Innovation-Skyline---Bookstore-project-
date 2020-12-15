@@ -9,6 +9,7 @@ import bookstore.esprit.SignUp.InscriptionController;
 import bookstore.esprit.entities.Users;
 import bookstore.esprit.services.usersCRUD;
 import bookstore.esprit.tests.MyConnection;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -17,9 +18,13 @@ import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
@@ -57,6 +62,7 @@ public class PersonnalDataInterfaceController implements Initializable {
     @FXML
     private TextField datagenre;
 //
+
     public void setDataname(String dataname) {
         this.dataname.setText(dataname);
     }
@@ -91,62 +97,42 @@ public class PersonnalDataInterfaceController implements Initializable {
     public void setDatagenre(String datagenre) {
         this.datagenre.setText(datagenre);
     }
+
     @FXML
     void confirmData(ActionEvent event) {
-
+        
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-       try{
-           
-       
-       Users u = bookstore.esprit.entities.GlobalClass.getCurrentUser();
-    //  System.out.println(u);
-//   dataname.setText(u.getNom());
-//    dataprenom.setText(u.getPrenom());
-//    dataemail.setText(u.getEmail());
-//           setDatadate(u.getDate_dinscription());
-String requete = "select * from users where email =?";
-           try {            
-            PreparedStatement pst = new MyConnection().getCnx().prepareStatement(requete);
-            pst.setString(1, u.getEmail());
-            ResultSet rs = pst.executeQuery();
-            if (rs.next()) {
-                  
+        try {
+
+            Users u = bookstore.esprit.entities.GlobalClass.getCurrentUser();
+            System.out.println(u.getEmail());
+            String requete = "select * from users where email =?";
+            try {
+                PreparedStatement pst = new MyConnection().getCnx().prepareStatement(requete);
+                pst.setString(1, u.getEmail());
+                ResultSet rs = pst.executeQuery();
+                if (rs.next()) {
+
                     setDataname(rs.getString(1));
                     setDataprenom(rs.getString(2));
                     setDataemail(rs.getString(3));
                     setDatadate(rs.getDate(4));
                     setDataauteur(rs.getString(6));
                     setDatagenre(rs.getString(5));
-                    
-                  //  user.setId_user(rs.getInt(8));
+
+                }
+            } catch (SQLException ex) {
+                ex.getMessage();
             }
-        } catch (SQLException ex) {
+
+        } catch (Exception ex) {
             ex.getMessage();
         }
-            
-           
- 
- 
 
-     //   datadate.setD(u.getDate_dinscription());
-        
-//           setDataname(u.getNom());
-//           setDataauteur(u.getAuteur_préféré());
-//           setDatadate(u.getDate_dinscription());
-//           setDataemail(u.getEmail());
-//           setDataprenom(u.getPrenom());
-//           setDatagenre(u.getGenre_préféré());
-//           setDatapwd(u.getPassword());
-//       //   uc.consulter_données_personnelles(Global.GlobalClass.getCurrentUser().getEmail(), Global.GlobalClass.getCurrentUser().getEmail());
-     //    System.out.println(u);
-       }catch(Exception ex){
-           ex.getMessage();
-       }
-        
     }
 
 }

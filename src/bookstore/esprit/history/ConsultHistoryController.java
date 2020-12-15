@@ -29,7 +29,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
  *
  * @author Oussema
  */
-public class ConsulaterHistoriqueController implements Initializable {
+public class ConsultHistoryController implements Initializable {
 
     /**
      * Initializes the controller class.

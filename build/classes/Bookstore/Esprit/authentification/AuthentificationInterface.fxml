@@ -49,9 +49,9 @@
                            </font></Button>
               </children>
             </StackPane>
-                  <StackPane prefHeight="36.0" prefWidth="375.0">
+                  <StackPane prefHeight="70.0" prefWidth="375.0">
                      <children>
-                        <Button fx:id="loginButton2" alignment="CENTER" contentDisplay="RIGHT" defaultButton="true" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#authentificationTest" prefHeight="32.0" prefWidth="170.0" text="Forget Password ! " textAlignment="RIGHT" StackPane.alignment="TOP_RIGHT">
+                        <Button fx:id="forgetbutton" alignment="CENTER" contentDisplay="RIGHT" defaultButton="true" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#pwdMail" prefHeight="34.0" prefWidth="170.0" text="Forget Password ! " textAlignment="RIGHT" StackPane.alignment="CENTER_RIGHT">
                            <cursor>
                               <Cursor fx:constant="S_RESIZE" />
                            </cursor>
@@ -63,7 +63,7 @@
                   </StackPane>
                   <StackPane prefHeight="61.0" prefWidth="375.0">
                      <children>
-                        <Button fx:id="loginButton1" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#authentificationTest" prefHeight="32.0" prefWidth="128.0" text="set Password !" StackPane.alignment="TOP_RIGHT">
+                        <Button fx:id="setButton1" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#set_Pwd" prefHeight="32.0" prefWidth="128.0" text="set Password !" StackPane.alignment="TOP_RIGHT">
                            <font>
                               <Font name="Berlin Sans FB Demi Bold" size="16.0" />
                            </font>

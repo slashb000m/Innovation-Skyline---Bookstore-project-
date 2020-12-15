@@ -5,6 +5,7 @@
  */
 package bookstore.esprit.tests;
 
+import bookstore.esprit.entities.Users;
 import bookstore.esprit.services.JavaMailing;
 import bookstore.esprit.services.usersCRUD;
 
@@ -16,8 +17,12 @@ public class MainClass {
     public static void main(String[] args) {
         MyConnection mc = MyConnection.getInstance();
         usersCRUD uc = new usersCRUD();
-       JavaMailing
-               .sendMail("soltanialia114@gmail.com","INSCRIPTION","Felicitation, vous êtes inscrit ");   
+        
+      //  Users u = new Users("ala_soltani@hotmail.com", "Aezakmi402??");
+      //  System.out.println(uc.authentifier("edinealaeddine344@gmail.com", "Aezakmi402??"));;
+  //     System.out.println(uc.exist("helimi.dhaouadi@hotmail.com"));
+//       JavaMailing
+//               .sendMail("soltanialia114@gmail.com","INSCRIPTION","Felicitation, vous êtes inscrit ");   
     }
 
 }

@@ -146,8 +146,7 @@ public class InscriptionController implements Initializable {
             success.setTitle("SignUp");
             success.setHeaderText(null);
             success.setContentText("open your email box u've recieved an email");
-            success.showAndWait();         
-//        
+            success.showAndWait();                
         }
 
     }

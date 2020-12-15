@@ -47,7 +47,7 @@ public class usersCRUD {
             pst.setDate(5, (Date) u.getDate_dinscription());
             pst.setString(6, u.getAuteur_préféré());
             pst.setString(7, u.getGenre_préféré());
-            pst.setString(8, u.getStatut());           
+            pst.setString(8, u.getStatut());
             pst.executeUpdate();
             System.out.println("utilisateur ajouté !");
             test = true;
@@ -57,14 +57,33 @@ public class usersCRUD {
         return test;
     }
 
-    public void modifier_PW(Users u, String pwd) {
-        if (authentifier(u.getEmail(), u.getPassword())) {
+    public String getPwfromDB(String email) {
+        String pwd = "";
+        String requete = "select password from users where email =?";
+        Users user = new Users();
+        try {
+            PreparedStatement pst = new MyConnection().getCnx().prepareStatement(requete);
+            pst.setString(1, email);
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()) {
+
+                pwd = rs.getString(1);
+
+            }
+        } catch (SQLException ex) {
+            ex.getMessage();
+        }
+        return pwd;
+    }
+
+    public void modifier_PW(String email, String pwd) {
+        if (authentifier(email, pwd)) {
             try {
                 String requete = "UPDATE users set password=? WHERE email=? and password=?";
                 PreparedStatement pst = new MyConnection().getCnx().prepareStatement(requete);
                 pst.setString(1, pwd);
-                pst.setString(2, u.getEmail());
-                pst.setString(3, u.getPassword());
+                pst.setString(2, email);
+                pst.setString(3, pwd);
                 pst.executeUpdate();
                 System.out.println("password modifié !");
                 pst.close();
@@ -73,7 +92,7 @@ public class usersCRUD {
                 System.out.println(ex.getMessage());
             }
         } else {
-            System.out.println("Mr " + u.getNom() + " vous n'etes pas inscrit");
+            System.out.println("you are not a member ");
         }
     }
 
@@ -86,11 +105,11 @@ public class usersCRUD {
             pst.setString(1, email);
             pst.setString(2, pwd);
             ResultSet rs = pst.executeQuery();
-            if (rs.next()) {                                                                  
-        return (rs.getString(4).equals(pwd) && rs.getString(3).equals(email));
-                 //u = new Users(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6),rs.getString(7) , rs.getDate(8));
-             //  Global.GlobalClass.setCurrentUser(u);
- //               Global.GlobalClass.setCurrentUser();
+            if (rs.next()) {
+                return (rs.getString(4).equals(pwd) && rs.getString(3).equals(email));
+                //u = new Users(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6),rs.getString(7) , rs.getDate(8));
+                //  Global.GlobalClass.setCurrentUser(u);
+                //               Global.GlobalClass.setCurrentUser();
             } else {
                 return false;
             }
@@ -155,29 +174,32 @@ public class usersCRUD {
         }
         return userData;
     }
-public Users getUser(String email){
-    String requete = "select * from users where email =?";
-    Users user = new Users() ;
-        try {            
+
+    public Users getUser(String email) {
+        String requete = "select * from users where email =?";
+        Users user = new Users();
+        try {
             PreparedStatement pst = new MyConnection().getCnx().prepareStatement(requete);
             pst.setString(1, email);
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
-                  
-                    user.setNom(rs.getString(1));
-                    user.setPrenom(rs.getString(2));
-                    user.setEmail(rs.getString(3));
-                    user.setDate_dinscription(rs.getDate(4));
-                    user.setAuteur_préféré(rs.getString(6));
-                    user.setGenre_préféré(rs.getString(5));
-                    user.setStatut(rs.getString(7));
-                  //  user.setId_user(rs.getInt(8));
+
+                user.setNom(rs.getString(1));
+                user.setPrenom(rs.getString(2));
+                user.setEmail(rs.getString(3));
+                user.setDate_dinscription(rs.getDate(4));
+                user.setAuteur_préféré(rs.getString(6));
+                user.setGenre_préféré(rs.getString(5));
+                user.setStatut(rs.getString(7));
+                //  user.setId_user(rs.getInt(8));
             }
         } catch (SQLException ex) {
             ex.getMessage();
         }
 
-return user;}
+        return user;
+    }
+
     public Map<Achats, Livre> consulterHistorique(Users u) {
         Map<Achats, Livre> myList = new HashMap<Achats, Livre>();
         try {
@@ -207,18 +229,30 @@ return user;}
     }
 
     public boolean exist(String email) {
-         boolean ishere = false;
-        try {           
-            String requete = "Selelect * from users where email=?";
+
+        String requete = "Select * from users where email=?";
+        Users user = new Users();
+        try {
             PreparedStatement pst = new MyConnection().getCnx().prepareStatement(requete);
             pst.setString(1, email);
             ResultSet rs = pst.executeQuery();
-            if (rs.next()) ishere = true;
-        } catch (SQLException ex) {
-   ex.getMessage();
-        }
-   return ishere; }
+            while (rs.next()) {
 
+                user.setNom(rs.getString(1));
+                user.setPrenom(rs.getString(2));
+                user.setEmail(rs.getString(3));
+                user.setDate_dinscription(rs.getDate(4));
+                user.setAuteur_préféré(rs.getString(6));
+                user.setGenre_préféré(rs.getString(5));
+                user.setStatut(rs.getString(7));
+                //  user.setId_user(rs.getInt(8));
+            }
+        } catch (SQLException ex) {
+            ex.getMessage();
+        }
+
+        return (user.getEmail().equals(email));
+    }
 }
 
 //    public void ajouterUser(Users u){
