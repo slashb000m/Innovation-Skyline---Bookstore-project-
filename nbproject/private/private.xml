@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/authentification/AuthentificationMain.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/mainInterface/Welcome.fxml</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/history/ConsulaterHistorique.fxml</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/entities/Users.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/services/usersCRUD.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/SignUp/InscriptionController.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/SignUp/FirstWindow.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/mainInterface/WelcomeController.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/entities/Admin.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/history/ConsulaterHistoriqueController.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/mainInterface/PersonnalDataInterface.fxml</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/Global/GlobalClass.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/authentification/AuthentificationInterfaceController.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/mainInterface/PersonnalDataInterfaceController.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/mainInterface/PersonnalData.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/history/ConsulterAchats.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/entities/Livre.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/SignUp/Inscription.fxml</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/entities/Achats.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/projet/tests/MainClass.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/mainInterface/MainInterface.java</file>
+            <file>file:/C:/Users/Oussema/Documents/NetBeansProjects/Bookstore/src/edu/project/authentification/AuthentificationInterface.fxml</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="email" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(#141e30, #243b55);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.SignUp.InscriptionController">
+   <children>
+      <Text fill="WHITE" layoutX="34.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom: ">
+         <effect>
+            <Bloom threshold="0.97" />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+         </font></Text>
+      <TextField fx:id="tfnom" layoutX="140.0" layoutY="106.0" prefHeight="25.0" prefWidth="175.0" promptText="Exp : Foulén" />
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="24.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom:" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="21.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect></Text>
+      <TextField fx:id="tfprenom" layoutX="140.0" layoutY="174.0" prefHeight="25.0" prefWidth="175.0" promptText="Exp : Ben foulen" />
+      <Text fx:id="email" fill="WHITE" fontSmoothingType="LCD" layoutX="24.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: ">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect></Text>
+      <TextField fx:id="tfemail" layoutX="140.0" layoutY="239.0" prefHeight="25.0" prefWidth="175.0" promptText="Exp : benfoulen.foulen@gmail.com" />
+      <Text fill="WHITE" layoutX="25.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mdp :">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+         </font></Text>
+      <PasswordField fx:id="tfpassword" layoutX="283.0" layoutY="286.0" prefHeight="25.0" prefWidth="175.0" promptText="***********">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></PasswordField>
+      <Text layoutX="283.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fill="#f8f5f5" fontSmoothingType="LCD" layoutX="347.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="auteur_préféré:" wrappingWidth="134.00390458479524">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect></Text>
+      <TextField fx:id="tfauteur" layoutX="505.0" layoutY="106.0" prefHeight="25.0" prefWidth="174.0" promptText="Exp: PAUL RICOUR " />
+      <Text fill="#fcf8f8" layoutX="347.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="genre_préféré: ">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+         </font></Text>
+      <TextField fx:id="tfgenre" layoutX="505.0" layoutY="174.0" prefHeight="25.0" prefWidth="174.0" promptText="Exp : Comédie" />
+      <Text fill="#f5f3f3" layoutX="347.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="statut: ">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect></Text>
+      <Button id="but" fx:id="ok" layoutX="559.0" layoutY="298.0" mnemonicParsing="false" onAction="#savePerson" prefHeight="40.0" prefWidth="107.0" text="s'inscrire" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font></Button>
+      <Label layoutX="26.0" layoutY="14.0" prefHeight="55.0" prefWidth="241.0" text="INSCRITPION " textAlignment="CENTER" textFill="#ffffffe5">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="37.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="tfstatut" layoutX="505.0" layoutY="228.0" prefHeight="25.0" prefWidth="174.0" />
+      <PasswordField fx:id="tfconfirm" layoutX="283.0" layoutY="346.0" prefHeight="25.0" prefWidth="174.0" promptText="***********" />
+      <Text fill="#fffafa" layoutX="14.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmer votre mdp:">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect></Text>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

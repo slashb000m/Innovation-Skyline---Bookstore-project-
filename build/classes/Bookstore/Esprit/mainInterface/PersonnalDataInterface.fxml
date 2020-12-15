@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="485.0" prefWidth="656.0" style="-fx-background-color: linear-gradient(#141e30, #243b55);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.mainInterface.PersonnalDataInterfaceController">
+   <children>
+      <TextField fx:id="dataname" layoutX="153.0" layoutY="64.0" />
+      <TextField fx:id="dataprenom" layoutX="153.0" layoutY="137.0" />
+      <TextField fx:id="dataemail" editable="false" layoutX="153.0" layoutY="212.0" />
+      <TextField fx:id="datadate" editable="false" layoutX="153.0" layoutY="315.0" />
+      <TextField fx:id="dataauteur" layoutX="483.0" layoutY="96.0" prefHeight="26.0" prefWidth="149.0" />
+      <TextField fx:id="datapwd" editable="false" layoutX="483.0" layoutY="263.0" prefHeight="25.0" prefWidth="149.0" />
+      <Text fill="#fffbfb" fontSmoothingType="LCD" layoutX="28.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom:" wrappingWidth="55.13671875">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Text>
+      <Text fill="#fffdfd" fontSmoothingType="LCD" layoutX="20.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom:" wrappingWidth="71.13672161102295">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Text>
+      <Text fill="#f8f4f4" fontSmoothingType="LCD" layoutX="28.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" wrappingWidth="55.13672161102295">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fffdfd" fontSmoothingType="LCD" layoutX="14.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date d'inscription:" wrappingWidth="124.8359375">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Text>
+      <Text fill="#fffefe" fontSmoothingType="LCD" layoutX="333.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auteur préféré:">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="337.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre préféré:">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Text>
+      <Text fill="#f8f5f5" fontSmoothingType="LCD" layoutX="355.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mot de passe:" wrappingWidth="79.5703125">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Text>
+      <Button layoutX="513.0" layoutY="429.0" mnemonicParsing="false" onAction="#confirmData" prefHeight="25.0" prefWidth="106.0" text="Confirmer">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="datagenre" layoutX="483.0" layoutY="179.0" />
+   </children>
+</AnchorPane>
