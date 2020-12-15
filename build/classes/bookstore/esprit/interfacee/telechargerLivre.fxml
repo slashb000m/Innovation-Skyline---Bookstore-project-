@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="777.0" style="-fx-background-color: linear-gradient(to right top, #0b0f15, #2b292e, #4a4347, #696161, #87817e);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.interfacee.TelechargerLivreController">
+   <children>
+      <Label layoutX="264.0" layoutY="104.0" text="Download this book ?">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#f85f00" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="26.0" />
+         </font></Label>
+      <Button fx:id="download_btn" layoutX="299.0" layoutY="371.0" mnemonicParsing="false" onAction="#telecharger_pdf_gratuit" prefHeight="51.0" prefWidth="179.0" text="Start Download now!" />
+   </children>
+</AnchorPane>
