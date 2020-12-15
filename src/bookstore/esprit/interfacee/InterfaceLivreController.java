@@ -5,6 +5,8 @@
  */
 package bookstore.esprit.interfacee;
 
+import bookstore.esprit.entities.souhaits;
+import bookstore.esprit.services.souhaitsCRUD;
 import java.util.logging.Logger;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -13,6 +15,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -27,11 +30,6 @@ import javafx.scene.layout.AnchorPane;
  * @author Dhia
  */
 public class InterfaceLivreController implements Initializable {
-
-    /**
-     * Initializes the controller class.
-     */
-    
     @FXML
     private AnchorPane anchorpane;
 
@@ -52,14 +50,15 @@ public class InterfaceLivreController implements Initializable {
 
     @FXML
     private TextField prix;
-    
-    
+    souhaits s = new souhaits();
+    souhaitsCRUD sc = new souhaitsCRUD();
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    public void setTexts(String s1,String s2,String s3 , String s4)
-    {
+    }
+
+    public void setTexts(String s1, String s2, String s3, String s4) {
         InputStream stream = null;
         try {
             this.titre.setText(s1);
@@ -79,5 +78,8 @@ public class InterfaceLivreController implements Initializable {
             }
         }
     }
-    
+
+    @FXML
+    private void ajouter_souhait(ActionEvent event) {
+    }
 }

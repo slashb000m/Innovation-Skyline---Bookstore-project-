@@ -5,14 +5,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="818.0" prefWidth="1066.0" style="-fx-background-color: linear-gradient(to right top, #0b0f15, #2b292e, #4a4347, #696161, #87817e);" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="bookstore.esprit.interfacee.InterfaceLivreController">
+<AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="818.0" prefWidth="1066.0" style="-fx-background-color: linear-gradient(to right top, #0b0f15, #2b292e, #4a4347, #696161, #87817e);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.interfacee.InterfaceLivreController">
    <children>
-      <TextField fx:id="description" layoutX="252.0" layoutY="589.0" prefHeight="145.0" prefWidth="563.0" />
+      <TextField fx:id="description" layoutX="252.0" layoutY="659.0" prefHeight="145.0" prefWidth="563.0" />
       <ImageView fx:id="imageViewLivre" fitHeight="414.0" fitWidth="563.0" layoutX="252.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="AcheterLivre" layoutX="903.0" layoutY="97.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="131.0" stylesheets="@design.css" text="Acheter" />
-      <Button fx:id="Ajout_souhait" layoutX="32.0" layoutY="97.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="183.0" text="Ajouter comme souhait " />
+      <Button fx:id="AcheterLivre" layoutX="869.0" layoutY="97.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="183.0" stylesheets="@design.css" text="Acheter" />
+      <Button fx:id="Ajout_souhait" layoutX="32.0" layoutY="97.0" mnemonicParsing="false" onAction="#ajouter_souhait" prefHeight="59.0" prefWidth="183.0" text="Ajouter comme souhait " />
       <TextField fx:id="titre" layoutX="319.0" layoutY="14.0" prefHeight="59.0" prefWidth="187.0" />
-      <TextField fx:id="prix" layoutX="668.0" layoutY="19.0" prefHeight="59.0" prefWidth="147.0" />
+      <TextField fx:id="prix" layoutX="668.0" layoutY="20.0" prefHeight="59.0" prefWidth="147.0" />
    </children>
 </AnchorPane>

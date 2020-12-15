@@ -63,7 +63,7 @@ public class AjoutLivreController implements Initializable {
   
     float prix = Float.parseFloat(Aprix.getText());
     int nombre_page =Integer.parseInt(Anombre.getText());
-    Livre l= new Livre(titre,  auteur,  catégorie,  description,  typelivre,  prix,  nombre_page,  image1) ;
+    Livre l= new Livre(titre,  auteur,  catégorie,  description,  typelivre,  prix,  nombre_page, image) ;
     LivreCRUD lc= new LivreCRUD();
     lc.AjouterLivre(l);
         } catch (Exception e) {

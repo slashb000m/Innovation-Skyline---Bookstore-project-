@@ -126,6 +126,7 @@ private int nRows = 3;  //no of row for tile pane
                      InterfaceLivreController ilc = loader.getController();
                     System.out.println(bookLabel + String.valueOf(price) + descripion + imageUrl);
                     ilc.setTexts(bookLabel, String.valueOf(price), descripion, imageUrl);
+         
                     Stage stage = new Stage();
                      Scene scene = new Scene(root3);
                     stage.setScene(scene);
