@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="780.0" prefWidth="1208.0" styleClass="pane1" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.interfacee.ListeReclamationsController">
+   <children>
+      <TableView fx:id="tableReclamation" layoutX="25.0" layoutY="109.0" prefHeight="475.0" prefWidth="1155.0">
+        <columns>
+          <TableColumn fx:id="colonneId" prefWidth="48.0" styleClass="column-header-background" text="Id" />
+          <TableColumn fx:id="colonneNom" prefWidth="230.0" styleClass="column-header-background" text="Email" />
+            <TableColumn fx:id="colonneTitre" prefWidth="188.0" styleClass="column-header-background" text="Titre" />
+            <TableColumn fx:id="colonneDescription" prefWidth="734.0" styleClass="column-header-background" text="Description" />
+        </columns>
+         <styleClass>
+            <String fx:value="tableview" />
+            <String fx:value=".table-view .column-header-background .label" />
+         </styleClass>
+      </TableView>
+      <Button fx:id="btnTraiter" layoutX="226.0" layoutY="617.0" mnemonicParsing="false" onAction="#traiterReclamation" prefHeight="46.0" prefWidth="147.0" styleClass="btn" text="Traiter reclamation" />
+      <Button fx:id="btnSupprimer" layoutX="812.0" layoutY="610.0" mnemonicParsing="false" onAction="#supprimerReclamation" prefHeight="53.0" prefWidth="173.0" styleClass="btn" text="Supprimer reclamation" />
+      <TextField fx:id="tfIdReclamation" layoutX="585.0" layoutY="630.0" prefHeight="31.0" prefWidth="39.0" styleClass="txtarea" />
+      <Label layoutX="429.0" layoutY="37.0" text="Liste des reclamations">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRetour" layoutX="25.0" layoutY="31.0" mnemonicParsing="false" onAction="#retourPannel" styleClass="btn" text="&lt;-">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

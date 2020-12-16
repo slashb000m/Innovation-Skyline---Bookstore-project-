@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" styleClass="pane1" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.interfacee.StatVenteLivreController">
+   <children>
+      <Button fx:id="btnRetour" layoutX="532.0" layoutY="704.0" mnemonicParsing="false" onAction="#retourInterfaceStatistique" prefHeight="47.0" prefWidth="182.0" styleClass="btn" text="Retour" />
+      <AreaChart fx:id="areaChartChiffreDaffaire" layoutX="194.0" layoutY="86.0" prefHeight="611.0" prefWidth="858.0" title="Chiffres d'affaire mensuel">
+        <xAxis>
+          <CategoryAxis label="temps" side="BOTTOM" tickLabelFill="WHITE" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="chiffre d'affaire en dinars" side="LEFT" />
+        </yAxis>
+      </AreaChart>
+   </children>
+</AnchorPane>

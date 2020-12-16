@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" styleClass="pane1" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.interfacee.StatistiquesController">
+   <children>
+      <Label layoutX="211.0" layoutY="62.0" text="Bienvenu a l'interface de statistique de vente ">
+         <font>
+            <Font size="39.0" />
+         </font></Label>
+      <Label layoutX="248.0" layoutY="142.0" prefHeight="56.0" prefWidth="685.0" text="veuillez saisir les statistiques a consulter">
+         <font>
+            <Font size="39.0" />
+         </font></Label>
+      <Button fx:id="btnStatChiffreDaffaire" layoutX="248.0" layoutY="390.0" mnemonicParsing="false" onAction="#afficherStatChiffreDaffaire" prefHeight="109.0" prefWidth="285.0" styleClass="btn" text="Chiffre d'affaire cumulé">
+         <font>
+            <Font size="21.0" />
+         </font></Button>
+      <Button fx:id="btnStatGenreLivre" layoutX="648.0" layoutY="386.0" mnemonicParsing="false" onAction="#AfficherStatGenreLivre" prefHeight="118.0" prefWidth="285.0" styleClass="btn" text="vente de livres selon genre">
+         <font>
+            <Font size="21.0" />
+         </font></Button>
+      <Button fx:id="btnRetour" layoutX="56.0" layoutY="42.0" mnemonicParsing="false" onAction="#retourPannel" prefHeight="56.0" prefWidth="54.0" styleClass="btn" text="&lt;-">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

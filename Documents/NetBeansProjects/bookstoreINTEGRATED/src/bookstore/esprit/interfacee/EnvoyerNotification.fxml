@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" styleClass="pane1" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.interfacee.EnvoyerNotificationController">
+   <children>
+      <TextField fx:id="tfObjet" layoutX="601.0" layoutY="238.0" prefHeight="31.0" prefWidth="267.0" />
+      <TextArea fx:id="tfContenu" layoutX="601.0" layoutY="328.0" prefHeight="200.0" prefWidth="267.0" />
+      <Label layoutX="403.0" layoutY="59.0" text="Notifier les utilisateurs">
+         <font>
+            <Font size="40.0" />
+         </font></Label>
+      <Label layoutX="173.0" layoutY="238.0" text="Objet de la notification">
+         <font>
+            <Font size="31.0" />
+         </font></Label>
+      <Label layoutX="175.0" layoutY="407.0" text="Notifier les utilisateurs">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+      <Button fx:id="btnNotifier" layoutX="480.0" layoutY="643.0" mnemonicParsing="false" onAction="#envoyerReclamation" prefHeight="46.0" prefWidth="240.0" styleClass="btn" text="Notifier">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="btnRetour" layoutX="38.0" layoutY="38.0" mnemonicParsing="false" onAction="#retourPannel" styleClass="btn" text="&lt;-">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

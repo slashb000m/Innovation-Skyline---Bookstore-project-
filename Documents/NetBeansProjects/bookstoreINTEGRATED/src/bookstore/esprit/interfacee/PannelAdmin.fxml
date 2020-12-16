@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" styleClass="pane1" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.interfacee.PannelAdminController">
+   <children>
+      <Label layoutX="353.0" layoutY="78.0" prefHeight="45.0" prefWidth="497.0" text="Bienvenu au pannel d'adminsitrateur">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+      <Button fx:id="btnGotoReduction" layoutX="83.0" layoutY="491.0" mnemonicParsing="false" onAction="#goReduction" prefHeight="62.0" prefWidth="250.0" styleClass="btn" text="Accorder une réduction" />
+      <Button fx:id="btnGotoStat" layoutX="837.0" layoutY="242.0" mnemonicParsing="false" onAction="#gotoStat" prefHeight="62.0" prefWidth="252.0" styleClass="btn" stylesheets="@../../../../../../../Desktop/main.css" text="consulter les statistiques de ventes" />
+      <Button fx:id="btnGotoReclamation" layoutX="88.0" layoutY="242.0" mnemonicParsing="false" onAction="#goReclamation" prefHeight="62.0" prefWidth="250.0" styleClass="btn" text="Gérer les réclamations" />
+      <Button fx:id="btnGotoNotif" layoutX="838.0" layoutY="491.0" mnemonicParsing="false" onAction="#goNotif" prefHeight="62.0" prefWidth="250.0" styleClass="btn" text="Envoyer notification" />
+      <Button fx:id="btnGestionUser" layoutX="526.0" layoutY="362.0" mnemonicParsing="false" onAction="#goGestionUser" prefHeight="108.0" prefWidth="149.0" styleClass="btn" text="Gestion utilisateurs" />
+   </children>
+</AnchorPane>

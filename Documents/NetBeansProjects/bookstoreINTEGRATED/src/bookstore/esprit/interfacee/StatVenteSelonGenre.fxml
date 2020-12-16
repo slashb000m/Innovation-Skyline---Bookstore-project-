@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" styleClass="pane1" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.interfacee.StatVenteSelonGenreController">
+   <children>
+      <Label layoutX="307.0" layoutY="61.0" text="Proportion de vente selon genre">
+         <font>
+            <Font size="41.0" />
+         </font></Label>
+      <PieChart fx:id="chart" layoutX="285.0" layoutY="155.0" prefHeight="506.0" prefWidth="631.0" />
+      <Button fx:id="btnRetour" layoutX="568.0" layoutY="695.0" mnemonicParsing="false" onAction="#retourInterfaceStatistique" styleClass="btn" text="Retour">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
