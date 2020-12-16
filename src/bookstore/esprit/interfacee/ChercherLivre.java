@@ -5,9 +5,6 @@
  */
 package bookstore.esprit.interfacee;
 
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -20,29 +17,29 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Dhia
+ * @author Alia
  */
-public class InterfaceLivre extends Application {
+public class ChercherLivre extends Application {
     
+     
     @Override
     public void start(Stage primaryStage) {
-         try {
-            Parent root=null;
+        Parent root=null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("ChercherLivres.fxml"));
             
-            root = FXMLLoader.load(getClass().getResource("InterfaceLivre.fxml"));
-            
-            
-            
-            
-            Scene scene = new Scene(root);
-            
-            primaryStage.setTitle("Hello World!");
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        } catch (IOException ex) {
-            Logger.getLogger(Accueil.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
+      
+        
+        Scene scene = new Scene(root);
+        
+        primaryStage.setTitle("Hello World!");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
+
 
     /**
      * @param args the command line arguments

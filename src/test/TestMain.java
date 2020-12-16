@@ -9,6 +9,7 @@ import bookstore.esprit.entities.Livre;
 import bookstore.esprit.entities.souhaits;
 import bookstore.esprit.entities.users;
 import bookstore.esprit.services.LivreCRUD;
+
 import bookstore.esprit.services.souhaitsCRUD;
 import bookstore.esprit.services.usersCrud;
 import java.sql.Date;
@@ -27,12 +28,12 @@ public class TestMain {
        LivreCRUD lc= new LivreCRUD();
     
      // Livre   l3=new Livre(15,"houmem ", "houmembook", "autobiographie", "houmem yahki ala rouhou", "hammeux", 0.15f, 1, "c://bureau");
-      Livre   l4=new Livre(25,"hammadi ", "hammadibook", "autobiographie", "hammadi yahki ala rouhou", "hammeux", 0.15f, 1, "c://bureau");
+     // Livre   l4=new Livre(25,"hammadi ", "hammadibook", "autobiographie", "hammadi yahki ala rouhou", "hammeux", 0.15f, 1, "c://bureau");
         
-//        lc.AjouterLivre(l4);
-//        String str = "2015-03-31";
-//        Date date = Date.valueOf(str);
-//        users u1 = new users("anyname", "anylastname", "anything@gmail.com", "1234", "hammadi", "bolice", "N/A",date, 4);
+       // lc.AjouterLivre(l4);
+        String str = "2015-03-31";
+        Date date = Date.valueOf(str);
+users u1 = new users("anyname", "anylastname", "anything@gmail.com", "1234", "hammadi", "bolice", "N/A",date, 1);
 ////        usersCrud us= new usersCrud();
 //        us.inscrire(u1);
 //    //Livre   l5=new Livre(0,"hey ", "heybook", "autobiographie", "heyheyhey", "heyyo", 0.15f, 1, "c://bureau");
@@ -40,19 +41,23 @@ public class TestMain {
 //    lc.AjouterLivre(l4);
 
        //users x=new users(1);
-       
+       Livre l = new Livre(1, "Pinoccio", "pinokieur", "Fantasy", "lying dummy who wants to to become a real boy", "pdf", 3.5f , 250, "c://bureau");
         
       
-String str = "2015-03-31";
-        Date date = Date.valueOf(str);
-        users u=   new users("anyname", "anylastname", "anything@gmail.com", "1234", "hammadi", "bolice", "N/A",date, 10);
-        
-      // sc.ajouterSouhaits(s5);
+        users u=   new users("houmem", "ayari", "houmem.ayari96@gmail.com", "1234", "fun", "bolice", "N/A",date, 10);
+        // sc.ajouterSouhaits(s5);
       souhaitsCRUD sc = new souhaitsCRUD();
    
-     //souhaits s5= new souhaits(l4.getIdentifiant(), u.getId_user());     
-        System.out.println(sc.listerSouhaits(u));
-    
+     souhaits s5= new souhaits(l.getIdentifiant(), u.getId_user());     
+        System.out.println(sc.listerSouhaits(u1));
+     LivreCRUD y = new LivreCRUD();
+        //y.AjouterLivre(l);
+      
+        
+       
+       
+sc.ajouterSouhaits(s5);
+
     }
 
 }

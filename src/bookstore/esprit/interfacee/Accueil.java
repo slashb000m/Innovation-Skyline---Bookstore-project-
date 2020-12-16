@@ -10,7 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
-    import javafx.event.EventHandler;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -22,14 +22,15 @@ import javafx.stage.Stage;
  *
  * @author Dhia
  */
-public class pageAccueil extends Application {
+public class Accueil extends Application {
     
     @Override
     public void start(Stage primaryStage) {
+       
         try {
             Parent root=null;
             
-            root = FXMLLoader.load(getClass().getResource("pageAccueil.fxml"));
+            root = FXMLLoader.load(getClass().getResource("Accueil.fxml"));
             
             
             
@@ -40,16 +41,15 @@ public class pageAccueil extends Application {
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException ex) {
-            ex.getMessage();
+            Logger.getLogger(Accueil.class.getName()).log(Level.SEVERE, null, ex);
         }
+ 
     }
-
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
         launch(args);
     }
     

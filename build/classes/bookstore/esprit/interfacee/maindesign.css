@@ -1,0 +1,79 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+/*.ajoutpanel{
+    -fx-background-color: linear-gradient(to right, #04181f, #071e27, #092530, #0b2c39, #0d3342, #133b4b, #184354, #1e4c5d, #295968, #346673, #40737d, #4c8088);
+}*/
+/*.ajoutpanell{
+    -fx-background-color: linear-gradient(to right top, #cabdac, #c6b6a3, #c3b09a, #bfa991, #bca289, #b59881, #ae8d79, #a78371, #987368, #896460, #785557, #67484e);}*/
+.ajoutpanel{
+    -fx-background-color: linear-gradient(to right top, #314455, #3b4659, #46475b, #50495c, #594b5c, #614d5e, #6a4f60, #725160, #7d5363, #885564, #935864, #9e5a63);}
+.supprimerlivre{
+    -fx-background-color: linear-gradient(to right top, #314455, #3b4659, #46475b, #50495c, #594b5c, #614d5e, #6a4f60, #725160, #7d5363, #885564, #935864, #9e5a63);}
+
+/* .ajoutpanel{ -fx-background-color: #D77A37}*/
+
+/*.supprimerlivre{
+     -fx-background-color:  linear-gradient(to right, #668281, #678478, #70836b, #808160, #927c5b, #a2825f, #b48764, #c68c6b, #d9a170, #e9b875, #f4d07b, #fcea85);
+}*/
+/*.pane{-fx-background-color:  #D3CDC4}*/
+.pane{-fx-background-color:  #97AABD}
+/*#CEB0A9*/
+.addbook{-fx-background-color:transparent;
+-fx-background-radius:5px;
+-fx-border-color:#233953;
+-fx-border-radius:5px;
+-fx-border-width:1px;
+-fx-text-fill:whitesmoke;}
+.whitevbox{-fx-background-color:  #ffffff;}
+.ajoutpanel{}
+.textf{-fx-background-color: transparent;
+ -fx-border-color: #DEDEE4;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-margin: 5px;
+}
+.combo{-fx-background-color:transparent;
+    -fx-border-color:white;}
+.listview{
+    -fx-background-color:transparent;
+    -fx-border-color:white;
+}
+.image{-fx-border-color:white;}
+.btn{-fx-background-color:transparent;
+-fx-background-radius:5px;
+-fx-border-color:#233953;
+-fx-border-radius:5px;
+-fx-border-width:1px;
+/*-fx-text-fill:#694B45;*/
+-fx-text-fill:#C96567;}
+.txtarea{ -fx-background-color:transparent;
+    -fx-border-color:white;}
+.datapicker{
+    -fx-control-inner-background: white ;
+       -fx-border-color:white;
+}
+.tableview{-fx-background-color:transparent;
+-fx-border-color:white;}
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+.icon{
+     -fx-background-color:#FF8C01;
+}
+.labele{-fx-text-fill: #1B2C46;}
+.buyme{ -fx-background-color:#233953;
+-fx-background-radius:5px;
+-fx-border-color:none;
+-fx-border-radius:5px;
+-fx-border-width:1px;
+/*-fx-text-fill:#694B45;*/
+-fx-text-fill: white;}
+

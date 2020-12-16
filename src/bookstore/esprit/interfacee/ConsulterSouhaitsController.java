@@ -87,7 +87,7 @@ ObservableList<Livre> selectedRows1, alllivres;
            
             
              sc.supprimerSouhaits(u,l);   
-             System.exit(0);
+           //
         
         }
      

@@ -50,15 +50,40 @@ public class InterfaceLivreController implements Initializable {
 
     @FXML
     private TextField prix;
-    souhaits s = new souhaits();
-    souhaitsCRUD sc = new souhaitsCRUD();
+   
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
 
-    public void setTexts(String s1, String s2, String s3, String s4) {
+        
+//    public void setTexts(String s1,String s2,String s3 , String s4)
+//    {
+//        InputStream stream = null;
+//        try {
+//            this.titre.setText(s1);
+//            this.prix.setText(s2);
+//            this.description.setText(s3);
+//            //image
+//            stream = new FileInputStream(s4);
+//            Image image = new Image(stream);
+//            this.imageViewLivre.setImage(image);
+//        } catch (FileNotFoundException ex) {
+//            Logger.getLogger(InterfaceLivreController.class.getName()).log(Level.SEVERE, null, ex);
+//        } finally {
+//            try {
+//                stream.close();
+//            } catch (IOException ex) {
+//                Logger.getLogger(InterfaceLivreController.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        }
+//    }
+    
+
+
+public void setTexts(String s1,String s2,String s3 , String s4)
+    {
         InputStream stream = null;
         try {
             this.titre.setText(s1);
@@ -77,9 +102,5 @@ public class InterfaceLivreController implements Initializable {
                 Logger.getLogger(InterfaceLivreController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-    }
-
-    @FXML
-    private void ajouter_souhait(ActionEvent event) {
     }
 }

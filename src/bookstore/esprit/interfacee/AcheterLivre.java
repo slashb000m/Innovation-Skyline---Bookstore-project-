@@ -22,14 +22,14 @@ import javafx.stage.Stage;
  *
  * @author Dhia
  */
-public class InterfaceLivre extends Application {
+public class AcheterLivre extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-         try {
+        try {
             Parent root=null;
             
-            root = FXMLLoader.load(getClass().getResource("InterfaceLivre.fxml"));
+            root = FXMLLoader.load(getClass().getResource("AcheterLivre.fxml"));
             
             
             
@@ -42,6 +42,8 @@ public class InterfaceLivre extends Application {
         } catch (IOException ex) {
             Logger.getLogger(Accueil.class.getName()).log(Level.SEVERE, null, ex);
         }
+ 
+    
     }
 
     /**

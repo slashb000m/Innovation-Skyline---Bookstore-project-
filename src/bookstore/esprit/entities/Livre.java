@@ -39,11 +39,34 @@ public class Livre {
         this.nombre_page = nombre_page;
     }
 
+    public Livre(String titre, String auteur, String description, float prix) {
+        this.titre = titre;
+        this.auteur = auteur;
+        this.description = description;
+        this.prix = prix;
+    }
+
     public Livre(int identifiant, String titre, String description) {
         this.identifiant = identifiant;
         this.titre = titre;
         this.description = description;
     }
+
+    public Livre(int identifiant, String titre, String auteur, String catégorie, String description, String typelivre, float prix, int nombre_page, String image) {
+        this.identifiant = identifiant;
+        this.titre = titre;
+        this.auteur = auteur;
+        this.catégorie = catégorie;
+        this.description = description;
+        this.typelivre = typelivre;
+        this.prix = prix;
+        this.nombre_page = nombre_page;
+        this.image = image;
+    }
+
+    
+
+    
 
     
 

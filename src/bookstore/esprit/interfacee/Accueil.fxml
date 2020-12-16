@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="861.0" prefWidth="1118.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.interfacee.PageAccueilController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="861.0" prefWidth="1118.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.interfacee.AccueilController">
    <children>
       <Pane prefHeight="861.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #0b0f15, #2b292e, #4a4347, #696161, #87817e);">
          <children>
@@ -23,12 +23,12 @@
       <Pane layoutX="200.0" prefHeight="174.0" prefWidth="918.0" style="-fx-background-color: linear-gradient(to right top, #0b0f15, #2b292e, #4a4347, #696161, #87817e);">
          <children>
             <TextField fx:id="search" layoutX="234.0" layoutY="69.0" prefHeight="32.0" prefWidth="391.0" promptText="search a book by name or author" styleClass="textf" />
-            <Button fx:id="btnsearch" layoutX="680.0" layoutY="65.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="108.0" styleClass="btn" text="Search" />
+            <Button fx:id="btnsearch" layoutX="680.0" layoutY="65.0" mnemonicParsing="false" onAction="#chercherLivre" prefHeight="39.0" prefWidth="108.0" styleClass="btn" text="Search" />
          </children>
       </Pane>
       <FlowPane layoutX="200.0" layoutY="175.0" prefHeight="689.0" prefWidth="920.0">
          <children>
-            <TilePane fx:id="tilePane" accessibleRole="TITLED_PANE" prefHeight="684.0" prefWidth="918.0" />
+            <TilePane fx:id="tilePane" accessibleRole="TITLED_PANE" prefHeight="684.0" prefWidth="917.0" />
          </children>
       </FlowPane>
    </children>
