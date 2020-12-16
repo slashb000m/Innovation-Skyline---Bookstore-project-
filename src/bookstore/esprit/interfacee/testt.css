@@ -1,0 +1,39 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-background-color:transparent;
+}
+.pane
+{
+-fx-background-color:#C2DDE8;
+}
+
+.trans-btn
+{
+-fx-background-color:white;
+}
+.btn
+{
+-fx-background-color:#305278;
+-fx-background-radius:10px;
+-fx-border-color:#E0B887;
+-fx-border-radius:10px;
+-fx-border-width:1px;
+-fx-text-fill:whitesmoke;
+}
+.pane1
+{
+-fx-background-color:transparent;
+-fx-background-radius:10px;
+-fx-border-color:#E0B887;
+-fx-border-radius:10px;
+}
+.tf_box
+{
+-fx-background-color:transparent;
+-fx-border-width:0 0 3px 0;
+-fx-border-color:#F3D6A5;
+
+}

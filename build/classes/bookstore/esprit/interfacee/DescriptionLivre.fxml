@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="400.0" styleClass="ajoutpanel" stylesheets="@maindesign.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.esprit.interfacee.DescriptionLivreController">
+   <children>
+      <TextField fx:id="quantite" alignment="CENTER" layoutX="240.0" layoutY="320.0" prefHeight="25.0" prefWidth="61.0" styleClass="textf" />
+      <Button layoutX="220.0" layoutY="319.0" mnemonicParsing="false" onAction="#moins" styleClass="btn" text="+" />
+      <Button layoutX="294.0" layoutY="319.0" mnemonicParsing="false" onAction="#plus" prefHeight="25.0" prefWidth="25.0" styleClass="btn" text="-" />
+      <TextArea fx:id="textsp" layoutX="221.0" layoutY="363.0" opacity="0.63" prefHeight="17.0" prefWidth="100.0" styleClass="txtarea" />
+      <Button layoutX="153.0" layoutY="370.0" mnemonicParsing="false" onAction="#TextSpeech" styleClass="addbook" text="Listen" />
+      <VBox layoutX="442.0" layoutY="46.0" prefHeight="493.0" prefWidth="313.0" styleClass="vbox">
+         <children>
+            <HBox prefHeight="14.0" prefWidth="271.0">
+               <children>
+                  <Label text="Title :" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="nom" styleClass="labele" text="nom">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin></Label>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="19.0" prefWidth="271.0">
+               <children>
+                  <Label text="Author :" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="auteur" styleClass="labele" text="Auteur">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin></Label>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="128.0" prefWidth="271.0">
+               <children>
+                  <Label text="Description" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <TextArea fx:id="description" opacity="0.66" prefHeight="121.0" prefWidth="137.0" styleClass="txtarea">
+                     <HBox.margin>
+                        <Insets left="30.0" top="7.0" />
+                     </HBox.margin></TextArea>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="20.0" prefWidth="271.0">
+               <children>
+                  <Label text="Price" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="prix" styleClass="labele" text="prix">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin></Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="271.0">
+               <children>
+                  <Label text="Number of page" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="nombre" styleClass="labele" text="Nombre ">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin></Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="271.0">
+               <children>
+                  <Label text="Catégorie" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="catégorie" styleClass="labele" text="catégorie">
+                     <HBox.margin>
+                        <Insets left="70.0" />
+                     </HBox.margin></Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="271.0">
+               <children>
+                  <Label text="Type of book" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="type" styleClass="labele" text="type">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="271.0">
+               <children>
+                  <Label text="Date" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="datee" styleClass="labele" text="Date">
+                     <HBox.margin>
+                        <Insets left="90.0" />
+                     </HBox.margin></Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="30.0" top="20.0" />
+         </padding>
+      </VBox>
+      <Pane layoutX="144.0" layoutY="51.0" prefHeight="268.0" prefWidth="283.0" styleClass="paneimage">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="261.0" fitWidth="270.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Button layoutX="21.0" layoutY="14.0" mnemonicParsing="false" styleClass="addbook" text="BACK" />
+      <Label layoutX="154.0" layoutY="325.0" text="Quantité" textFill="#97aabd">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="596.0" layoutY="15.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="100.0" styleClass="buyme" text="Buy me">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
