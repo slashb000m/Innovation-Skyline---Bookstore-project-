@@ -81,7 +81,7 @@ public class DescriptionLivreController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
           try {
-            String requete= "SELECT  titre ,auteur ,catégorie, description ,typelivre , prix ,nombre_page , date_sortie , image FROM livre where  identifiant='3' ";
+            String requete= "SELECT  titre ,auteur ,categorie, description ,type, prix ,nbr_pages, date_sortie , image FROM livres where  id_livre='12' ";
             //Statement st = new MyConnexion().getCnx().createStatement();
              PreparedStatement pst = new MyConnexion().getCnx().prepareStatement(requete);
             ResultSet rs = pst.executeQuery(requete);
@@ -89,11 +89,11 @@ public class DescriptionLivreController implements Initializable {
               
                 this.nom.setText(rs.getString("titre"));
                 this.auteur.setText(rs.getString("auteur"));
-                this.catégorie.setText(rs.getString("catégorie"));
+                this.catégorie.setText(rs.getString("categorie"));
                 this.description.setText(rs.getString("description"));
-                this.type.setText(rs.getString("typelivre"));
+                this.type.setText(rs.getString("type"));
                 this.prix.setText(String.valueOf(rs.getFloat("prix")));
-                this.nombre.setText(String.valueOf(rs.getInt("nombre_page")));
+                this.nombre.setText(String.valueOf(rs.getInt("nbr_pages")));
                 this.datee.setText(String.valueOf(rs.getDate("date_sortie")));
                 System.out.println(rs.getString("image"));
                /* Image img= new Image(getClass().getResourceAsStream(rs.getString("image")));

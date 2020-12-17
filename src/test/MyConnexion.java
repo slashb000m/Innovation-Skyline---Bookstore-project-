@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  * @author Alia
  */
 public class MyConnexion {
-    public String url="jdbc:mysql://localhost:3306/bookstore";
+    public String url="jdbc:mysql://localhost:3306/bookstore_bd";
     public String login="root";
     public String password="";
     Connection cnx;

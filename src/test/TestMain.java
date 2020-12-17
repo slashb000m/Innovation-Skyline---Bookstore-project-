@@ -24,7 +24,7 @@ public class TestMain {
        // Livre l3 = new Livre( "mariem abidli", "Pam Jenoff ", "adventure", "After finding an ", "numérique", 122.0f, 286 );
        
         LivreCRUD lc= new LivreCRUD();
-        //lc.AjouterLivre(l4);
+        lc.AjouterLivre(l2);
        // lc.supprimerLivre(l2);
        // for (int i = 0; i < 10; i++) {
            //System.out.println(lc.chercherLivre()); 

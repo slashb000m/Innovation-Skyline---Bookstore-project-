@@ -53,7 +53,7 @@ public class ChercherLivresController implements Initializable {
         int n = 0;
         boolean test;
         try {
-            String requete = "SELECT  titre , auteur ,image  FROM livre ";
+            String requete = "SELECT  titre , auteur ,image  FROM livres ";
 
             Statement st = new MyConnexion().getCnx().createStatement();
             ResultSet rs = st.executeQuery(requete);

@@ -96,13 +96,13 @@ public class ModifierLivreController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
            try {
-            String requete = "SELECT identifiant , titre ,auteur ,catégorie , description  ,typelivre,prix,nombre_page  ,date_sortie FROM livre";
+            String requete = "SELECT id_livre , titre ,auteur ,categorie , description  ,type,prix,nbr_pages ,date_sortie FROM livres";
             Statement st = new MyConnexion().getCnx().createStatement();
             ResultSet rs = st.executeQuery(requete);
             while (rs.next()) {
                 Livre l = new Livre();
 
-                list.add(new Livre(rs.getInt("identifiant"), rs.getString("titre"), rs.getString("auteur"), rs.getString("catégorie"), rs.getString("description"),rs.getString("typelivre"),rs.getFloat("prix"),rs.getInt("nombre_page"),rs.getDate("date_sortie")));
+                list.add(new Livre(rs.getInt("id_livre"), rs.getString("titre"), rs.getString("auteur"), rs.getString("categorie"), rs.getString("description"),rs.getString("type"),rs.getFloat("prix"),rs.getInt("nbr_pages"),rs.getDate("date_sortie")));
 
                 System.out.println("\n");
             }

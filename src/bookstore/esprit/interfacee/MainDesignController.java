@@ -90,9 +90,11 @@ private Parent fxml;
             }
         });
     } 
-      @FXML
-    private void open_searchybook(ActionEvent event){
-      TranslateTransition t = new TranslateTransition(Duration.seconds(0), vbox);
+  
+
+    @FXML
+    private void openSearchbook(ActionEvent event) {
+        TranslateTransition t = new TranslateTransition(Duration.seconds(0.2), vbox);
         t.setToX(vbox.getLayoutX() *0);
         t.play();
         t.setOnFinished((e) ->{
@@ -104,6 +106,6 @@ private Parent fxml;
                 
             }
         });
-    } 
+    }
     
 }

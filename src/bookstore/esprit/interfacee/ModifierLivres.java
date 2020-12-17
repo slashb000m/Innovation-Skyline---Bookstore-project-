@@ -25,7 +25,7 @@ public class ModifierLivres extends Application {
     public void start(Stage primaryStage) {
         Parent root=null;
         try {
-            root = FXMLLoader.load(getClass().getResource("ModificationLivres.fxml"));
+            root = FXMLLoader.load(getClass().getResource("ModifierLivre.fxml"));
             
         } catch (Exception e) {
             System.out.println(e.getMessage());

@@ -86,13 +86,13 @@ public class SupprimerLivreController implements Initializable {
     @FXML
     private void afficherliste(ActionEvent event) {
         try {
-            String requete = "SELECT identifiant , titre ,auteur ,catégorie FROM livre";
+            String requete = "SELECT id_livre , titre ,auteur ,categorie FROM livres";
             Statement st = new MyConnexion().getCnx().createStatement();
             ResultSet rs = st.executeQuery(requete);
             while (rs.next()) {
                 Livre l = new Livre();
 
-                list.add(new Livre(rs.getInt("identifiant"), rs.getString("titre"), rs.getString("auteur"), rs.getString("catégorie")));
+                list.add(new Livre(rs.getInt("id_livre"), rs.getString("titre"), rs.getString("auteur"), rs.getString("categorie")));
 
                 System.out.println("\n");
             }

@@ -29,7 +29,7 @@ public class LivreCRUD {
 
     public void AjouterLivre(Livre l) {
         try {
-            String requete = "INSERT INTO livre (titre,auteur, catégorie,description,typelivre,prix,nombre_page,date_sortie,image,chemin)"
+            String requete = "INSERT INTO livres (titre,auteur, categorie,description,type,prix,nbr_pages,date_sortie,image,chemin)"
                     + "VALUES (?,?,?,?,?,?,?,?,?,?) ";
 
             PreparedStatement pst = new MyConnexion().getCnx().prepareStatement(requete);
@@ -54,7 +54,7 @@ public class LivreCRUD {
     public boolean supprimerLivre(Livre l) {
         boolean etat = false;
         try {
-            String requete = "DELETE FROM Livre WHERE identifiant=?";
+            String requete = "DELETE FROM Livres WHERE id_livre=?";
             PreparedStatement pst = new MyConnexion().getCnx().prepareStatement(requete);
             pst.setInt(1, l.getIdentifiant());
             pst.executeUpdate();
@@ -71,13 +71,13 @@ public class LivreCRUD {
     public ObservableList<Livre> listerLivre1() {
         ObservableList<Livre> list = null;
         try {
-            String requete = "SELECT identifiant , titre ,auteur ,catégorie, description ,typelivre , prix ,nombre_page FROM livre";
+            String requete = "SELECT id_livre , titre ,auteur ,categorie, description ,type , prix ,nbr_pages FROM livres";
             Statement st = new MyConnexion().getCnx().createStatement();
             ResultSet rs = st.executeQuery(requete);
             while (rs.next()) {
                 Livre l = new Livre();
 
-                list.add(new Livre(rs.getInt("identifiant"), rs.getString("titre"), rs.getString("auteur"), rs.getString("catégorie"), rs.getString("description"), rs.getString("typelivre"), rs.getFloat("prix"), rs.getInt("nombre_page")));
+                list.add(new Livre(rs.getInt("id_livre"), rs.getString("titre"), rs.getString("auteur"), rs.getString("categorie"), rs.getString("description"), rs.getString("type"), rs.getFloat("prix"), rs.getInt("nbr_pages")));
 
                 System.out.println("\n");
             }
@@ -90,7 +90,7 @@ public class LivreCRUD {
     public List<Livre> listerLivre() {
         List<Livre> myList = new ArrayList<Livre>();
         try {
-            String requete = "SELECT identifiant , titre ,auteur ,catégorie, description ,typelivre , prix ,nombre_page FROM livre";
+            String requete = "SELECT id_livre , titre ,auteur ,categorie, description ,type , prix ,nbr_pages FROM livres";
             Statement st = new MyConnexion().getCnx().createStatement();
             ResultSet rs = st.executeQuery(requete);
             while (rs.next()) {
@@ -117,8 +117,8 @@ public class LivreCRUD {
 
     public void modifierLivre(Livre l, int id) {
         try {
-            String requete = "UPDATE livre SET identifiant=? ,titre=? , auteur=?,catégorie=?,description=?,typelivre=? ,prix=? ,nombre_page=? ,date_sortie=? "
-                    + "WHERE identifiant=? ";
+            String requete = "UPDATE livres SET id_livre=? ,titre=? , auteur=?,categorie=?,description=?,type=? ,prix=? ,nbr_pages=? ,date_sortie=? "
+                    + "WHERE id_livre=? ";
             PreparedStatement pst = new MyConnexion().getCnx().prepareStatement(requete);
 
             pst.setInt(1, l.getIdentifiant());
